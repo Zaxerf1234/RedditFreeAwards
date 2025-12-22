@@ -24,6 +24,9 @@ function sendAward(thingId, awardId) {
 	.then(r => r.json())
 	.then(r => console.log("Awarded", thingId))
 	.catch(console.error);
+	setTimeout(() => {
+		location.reload();
+	}, 2000);
 }
 
 function createAwardUI(thingId) {
